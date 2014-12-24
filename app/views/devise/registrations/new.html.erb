@@ -1,0 +1,22 @@
+<div id="logmsk" style="display: block;" class='margin-top-5p'>
+  <div id="userbox">
+    <h1 id="signup">Sign up</h1>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+   
+      <%= f.text_field :first_name, autofocus: true, placeholder: "First Name", style: "opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;", class: 'text_field' %>
+      
+      <%= f.text_field :last_name, autofocus: true, placeholder: "Last Name", style: "opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;", class: 'text_field' %>
+
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", style: "opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;", class: 'text_field' %>
+      
+      <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', style: "opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;", class: 'text_field' %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Password', style: "opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;", class: 'text_field' %>
+
+      <%= f.submit "Sign up", id: "signupb", class: "btn btn-danger" %>
+    <%end%>
+
+    <%= render "devise/shared/links" %>
+    <div class="clearfix"></div>
+  </div>
+</div>

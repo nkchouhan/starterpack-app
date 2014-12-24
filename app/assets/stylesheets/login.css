@@ -1,0 +1,160 @@
+/*!
+ * Sign Up/Login Box v0.0.1 (http://codepen.io/koheishingai/FLvgs)
+ * Copyright 2014 Kohei Shingai.
+ * Licensed under MIT 
+ */
+
+
+#signup,#name,#pass,#signupb {
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+
+#logint:hover {
+    text-decoration: underline;
+}
+
+#logint {
+    color: rgba(66, 134, 237, 0.78);
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    margin: -4px 37px;
+    font-size: 14px;
+}
+
+#name {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0 8px;
+    margin: 44px auto;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid silver;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    color: #838383;
+    width: 409px;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.text_field {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0 8px;
+    margin: 10px auto;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid silver;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    color: #838383;
+    width: 409px;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+    text-align: left;
+}
+
+#pass {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0 8px;
+    margin: 16px auto;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid silver;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    color: #838383;
+    width: 409px;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+    text-align: left;
+}
+
+#signup {
+    margin-bottom: 40px;
+    padding: 3px 0px 9px;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    background: #5B90C0;
+    font-size: 22px;
+}
+
+#signupb {
+    position: relative;
+    right: 30px;
+    bottom: 20px;
+    font-size: 17px;
+    width: 103px;
+    height: 35px;
+    margin-top: 40px;
+    float: right;
+}
+
+#userbox {
+    position: relative;
+    width: 480px;
+    height: auto;
+    background: white;
+    top: 50%;
+    left: 50%;
+    margin-left: -240px;
+    box-shadow: 3px 12px 25px rgba(0, 0, 0, 0.45);
+}
+
+#logmsk {
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.32);
+    box-shadow: inset 0 0 376px rgba(0, 0, 0, 0.22);*/
+    z-index: 9999;
+    display: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #fff;
+    color: #333;
+}
