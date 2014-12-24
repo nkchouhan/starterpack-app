@@ -1,0 +1,28 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: starterpack_dev
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: starterpack_test
+  host: localhost
+  pool: 5
+  username: postgres
+  password: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: starterpack_prod
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+
+
