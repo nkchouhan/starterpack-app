@@ -1,0 +1,42 @@
+<div class="col-md-8 col-md-offset-4">
+  <%= form_tag(photos_path, multipart: true) do %>
+    <div class="row">
+      <h4>Step1: upload images</h4>
+      <div class="col-md-6">
+        <center>
+          <div class="row">
+            <div class="col-sm-6 col-xs-6 well image_container" data-name='photo_first'>
+              <%= image_tag("", :class => 'photo_first hide', :width => "100%", :height => "100%" ) %>
+              <p class="no_image_photo_first">click here to upload image</p>
+            </div>
+            <div class="col-sm-6 col-xs-6 well image_container" data-name='photo_second'>
+            <%= image_tag("", :class => 'photo_second hide', :width => "100%", :height => "100%" ) %>
+              <p class="no_image_photo_second">click here to upload image</p>
+            </div>
+            <div class="col-sm-6 col-xs-6 well image_container" data-name='photo_third'>
+            <%= image_tag("", :class => 'photo_third hide', :width => "100%", :height => "100%" ) %>
+              <p class="no_image_photo_third">click here to upload image</p>
+            </div>
+            <div class="col-sm-6 col-xs-6 well image_container" data-name='photo_four'>
+            <%= image_tag("", :class => 'photo_four hide', :width => "100%", :height => "100%" ) %>
+              <p class="no_image_photo_four">click here to upload image</p>
+            </div>
+          </div>
+        </center>
+      </div>
+    </div>
+    <div class="row margin-top-10">
+      <h4>Step2: Give it a name</h4>
+      <div class="col-md-6">
+        <%= text_field_tag :title %>
+      </div>
+    </div>
+    <%= file_field_tag "photo_first", class: 'photo-file-input hide', id: 'photo_first' %>
+    <%= file_field_tag "photo_second", class: 'photo-file-input hide', id: 'photo_second'  %>
+    <%= file_field_tag "photo_third", class: 'photo-file-input hide', id: 'photo_third' %>
+    <%= file_field_tag "photo_four", class: 'photo-file-input hide', id: 'photo_four' %>
+    <%= submit_tag "Submit Image", class: 'btn btn-success margin-top-10' %>
+  <% end %>
+</div>
+
+

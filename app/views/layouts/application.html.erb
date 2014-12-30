@@ -12,12 +12,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
-    <%= render partial: 'shared/nav'%>
-    <div id="page-wrapper">
-      <div class="container-fluid">
-        <%= yield %>
-      </div>
+  <%= render partial: 'shared/nav' %>
+
+  <div class='container' style="min-height: 100%; margin-bottom: 60px;">
+    <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
+
+  <div id="footer" class="footer navbar-fixed-bottom">
+    <div class="container">
+      <p class="text-muted text-center">Copyright <%= Date.today.year %> - Final Push LLC </p>
     </div>
   </div>
 
