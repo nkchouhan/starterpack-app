@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @photo = Photo.new
@@ -12,16 +13,17 @@ class PhotosController < ApplicationController
       else
         image_list += Magick::ImageList.new(params[pho].path)
       end
-    end  
+    end 
     title = params["title"]
     montage = image_list.montage do
       self.tile     = "2x2"
       self.title = title
+      self.geometry = '200x200!+0+0'
     end
     name = Time.now.to_i.to_s + ".png"
     location = ('tmp/'+name)
     montage.write(location)
-    photo = current_user.photos.new
+    photo = current_user.photos.new(title: title)
     photo.avatar = File.open(location)
     photo.save
     File.delete(location)

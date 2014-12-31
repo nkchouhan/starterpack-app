@@ -1,17 +1,19 @@
 <div class='col-md-12'>
   <div class="col-md-9">
-    <div class="row">
-      <% @photos.each do |photo| %>
-       <div class="col-sm-3 col-xs-6">
-          <center><h4>Title of Image</h4></center>
-          <div class="panel panel-default">
-            <div class="panel-thumbnail"><%=link_to image_tag(photo.avatar_url, class: "img-responsive"), photo_path(photo) %>
+    <% @photos.each_slice(4).each do |photo_group| %>
+      <div class="row">
+        <% photo_group.each do |photo| %>
+          <div class="col-sm-3 col-xs-6">
+            <center><h4><%= photo.title %></h4></center>
+            <div class="panel panel-default">
+              <div class="panel-thumbnail"><%=link_to image_tag(photo.avatar_url, class: "img-responsive"), photo_path(photo) %>
+              </div>
+              <p>By- <%= photo.user.full_name %> <%= formated_date(photo.created_at) %></p>
             </div>
-            <p>By- Creator of image 10/10/14</p>
-          </div>
-        </div><!--/col-->
-      <%end%>
-    </div>
+          </div><!--/col-->
+        <% end %>
+      </div>
+    <%end%>
   </div>
   
   <div class="col-md-3 margin-top-5p">

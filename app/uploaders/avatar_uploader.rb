@@ -97,4 +97,19 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def resize(width, height, gravity = 'Center')
+    manipulate! do |img|
+      img.combine_options do |cmd|
+        cmd.resize width.to_s
+        if img[:width] < img[:height]
+          cmd.gravity gravity
+          cmd.background "rgba(255,255,255,0.0)"
+          cmd.extent "#{width}x#{height}"
+        end
+      end
+      img = yield(img) if block_given?
+      img
+    end
+  end
+
 end
