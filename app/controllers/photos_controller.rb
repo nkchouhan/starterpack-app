@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def new
     @photo = Photo.new
@@ -31,7 +31,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = current_user.photos.find(params[:id])
+    @photo = Photo.find(params[:id])#current_user.photos.find(params[:id])
   end
 
 end

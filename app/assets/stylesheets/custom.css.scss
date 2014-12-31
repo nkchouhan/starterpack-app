@@ -34,3 +34,13 @@
   margin-bottom: 0px !important;
   cursor: pointer;
 }
+
+.error_box{
+  border: 1px solid red !important;
+}
+
+.image_block{
+  .panel{
+    min-height: 200px;
+  }
+}

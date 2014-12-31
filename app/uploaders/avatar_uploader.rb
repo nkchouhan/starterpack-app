@@ -29,6 +29,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(jpg jpeg gif png)
   end
+
+  def default_url
+    asset_path "missing.png"
+  end
 =begin
 
   version :small do

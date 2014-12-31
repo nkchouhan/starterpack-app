@@ -1,9 +1,18 @@
+
+<div class='col-md-12'>
+
+    <ul class="nav nav-pills">
+      <li><%= link_to "Most Pupular", "javascript:void(0);", id: "most-popular" %></li>
+      <li class="active"><%= link_to "Newest", "javascript:void(0);", id: 'newest' %></li>
+    </ul>
+</div>
+
 <div class='col-md-12'>
   <div class="col-md-9">
     <% @photos.each_slice(4).each do |photo_group| %>
       <div class="row">
         <% photo_group.each do |photo| %>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-sm-3 col-xs-6 image_block">
             <center><h4><%= photo.title %></h4></center>
             <div class="panel panel-default">
               <div class="panel-thumbnail"><%=link_to image_tag(photo.avatar_url, class: "img-responsive"), photo_path(photo) %>
@@ -30,5 +39,11 @@
       </div><!--/col-->
     </div>
 
+  </div>
+</div>
+
+<div class='col-md-12'>
+  <div class="col-md-9">
+    <%= paginate @photos, :theme => 'bootstrap3' %>
   </div>
 </div>
