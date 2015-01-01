@@ -3,6 +3,7 @@
     <% if user_signed_in? %>
       <%= menu_item "Home", root_path %>
       <%= menu_item "FAQ", "#" %>
+      <%#binding.pry%>
       <%= drop_down current_user.first_name.titlecase do %>
         <%= menu_item "#" do%>
           <i class="fa fa-pencil-square-o"> Edit Profile</i>

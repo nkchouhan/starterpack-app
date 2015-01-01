@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+  get '/users/:id/finish_signup' => 'users#finish_signup', :as => :finish_signup
+  patch '/users/:id/finish_signup' => 'users#finish_signup', :as => :finish_signup_patch
   resources :home
   resources :photos, only: [:new, :create, :show]
   get '/process_image' => "photos#process_image"

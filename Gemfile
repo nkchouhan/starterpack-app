@@ -29,7 +29,9 @@ gem 'rails_12factor'
 gem 'carrierwave', '~> 0.9.0'
 #apt-get install libmagick9-dev 
 gem "rmagick", :require => 'RMagick'
-
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring',        group: :development  
