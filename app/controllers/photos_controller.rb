@@ -14,12 +14,13 @@ class PhotosController < ApplicationController
         image_list += Magick::ImageList.new(params[pho].path)
       end
     end 
-    title = params["title"]
+    title = "\n" + params["title"]
     montage = image_list.montage do
       self.tile     = "2x2"
       self.title = title
       self.geometry = '200x200!+0+0'
     end
+
     name = Time.now.to_i.to_s + ".png"
     location = ('tmp/'+name)
     montage.write(location)
