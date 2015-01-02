@@ -20,6 +20,6 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to image_tag("social/"+provider.to_s + "-login.png", class: 'social-login-img margin-top-10 margin-bottom-10'), omniauth_authorize_path(resource_name, provider), class: 'margin-left-40' %><br />
+    <%= link_to image_tag("social/"+provider.to_s + "-login.png", class: 'social-login-img margin-top-10'), omniauth_authorize_path(resource_name, provider), class: 'margin-left-40' %><br />
   <% end -%>
 <% end -%>

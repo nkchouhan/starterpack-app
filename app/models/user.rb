@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  devise :omniauthable, :omniauth_providers => [:facebook, :twitter]         
+  devise :omniauthable, :omniauth_providers => [:facebook, :twitter, :google_oauth2]         
   has_many :photos
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update

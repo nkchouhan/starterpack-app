@@ -11,5 +11,16 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require_self
  */
+
+ #nprogress .bar{
+  background: none repeat scroll 0 0 #ffffff !important;
+  height: 4px !important;
+ }
+
+#nprogress .peg{
+  box-shadow: 0 0 10px #ffffff, 0 0 5px #ffffff !important;
+}

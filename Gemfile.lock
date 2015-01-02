@@ -82,6 +82,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nprogress-rails (0.1.6.5)
     oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -94,6 +95,11 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (2.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-google-oauth2 (0.2.6)
+      omniauth (> 1.0)
+      omniauth-oauth2 (~> 1.1)
+    omniauth-linkedin (0.2.0)
+      omniauth-oauth (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -193,8 +199,11 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
+  nprogress-rails
   omniauth
   omniauth-facebook
+  omniauth-google-oauth2
+  omniauth-linkedin
   omniauth-twitter
   pg
   pry
