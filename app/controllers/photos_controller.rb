@@ -24,7 +24,7 @@ class PhotosController < ApplicationController
     name = Time.now.to_i.to_s + ".png"
     location = ('tmp/'+name)
     montage.write(location)
-    photo = current_user.photos.new(title: title)
+    photo = current_user.photos.new(title: title, tag_list: params[:tags])
     photo.avatar = File.open(location)
     photo.save
     File.delete(location)

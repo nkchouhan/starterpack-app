@@ -31,6 +31,12 @@
         <%= text_field_tag :title %>
       </div>
     </div>
+     <div class="row margin-top-10">
+      <h4>Step3: Give its tags</h4>
+      <div class="col-md-6">
+        <%= text_field_tag :tags %>
+      </div>
+    </div>
     <%= file_field_tag "photo_first", class: 'photo-file-input hide', id: 'photo_first' %>
     <%= file_field_tag "photo_second", class: 'photo-file-input hide', id: 'photo_second'  %>
     <%= file_field_tag "photo_third", class: 'photo-file-input hide', id: 'photo_third' %>
@@ -39,4 +45,6 @@
   <% end %>
 </div>
 
-
+<script type="text/javascript">
+  $('#tags').tagsInput();
+</script>>

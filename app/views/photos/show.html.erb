@@ -4,7 +4,7 @@
     <%= image_tag @photo.avatar.medium.url, class: 'view_image' %>
   </div>
   <div class="col-md-12 margin-top-10">
-    <p><strong>Tags: </strong>Test, Test1</p>
+    <p><strong>Tags: </strong><%= @photo.tag_list.join(", ") %></p>
   </div>
 
   <div class="col-md-12">
