@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
+//= require social-share-button
 //= require_tree .
 
 NProgress.configure({
