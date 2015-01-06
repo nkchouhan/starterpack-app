@@ -1,4 +1,4 @@
-<%= social_share_button_tag(@photo.title, :url => @photo.avatar.medium.url, :image => @photo.avatar.medium.url) %>
+<%= social_share_button_tag(@photo.title, :url => full_path(@photo.avatar.medium.url) )%>
 
 <div class="col-md-6 col-md-offset-2">
   <div class="col-md-12">
