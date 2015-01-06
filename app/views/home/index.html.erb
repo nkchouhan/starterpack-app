@@ -15,7 +15,7 @@
           <div class="col-sm-3 col-xs-6 image_block">
             <center><h4><%= photo.title %></h4></center>
             <div class="panel panel-default">
-              <div class="panel-thumbnail"><%=link_to image_tag(photo.avatar_url, class: "img-responsive"), photo_path(photo) %>
+              <div class="panel-thumbnail"><%=link_to image_tag(photo.avatar_url, class: "img-responsive"), photo_path(photo),  data: { no_turbolink: true } %>
               </div>
               <p>By- <%= photo.user.full_name %> <%= formated_date(photo.created_at) %></p>
             </div>
