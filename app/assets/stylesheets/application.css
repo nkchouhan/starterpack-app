@@ -25,3 +25,8 @@
 #nprogress .peg{
   box-shadow: 0 0 10px #ffffff, 0 0 5px #ffffff !important;
 }
+
+.loader{
+  background: url("/assets/loader.gif") no-repeat;
+  height: 30px;
+}
